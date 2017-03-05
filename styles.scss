@@ -1,0 +1,67 @@
+//----------------------------------------
+//  Constants
+//----------------------------------------
+$mainbodyFontSize: 16px;
+
+$maxWidth: 1200px;
+$tabletWidth: 960px;
+$mobileWidth: 600px;
+
+
+//----------------------------------------
+//  Element Rules
+//----------------------------------------
+html {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+//----------------------------------------
+//  Class Rules
+//----------------------------------------
+
+.tshirt-wrapper {
+  display: flex;
+  margin: 0 auto;
+  max-width: $maxWidth;
+}
+
+img {
+  width: 100%;
+}
+
+.tshirt {
+  border: 1px solid lightblue;
+  flex: 1;
+  min-width: 11rem;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+
+//----------------------------------------
+//  Tablet Rules
+//----------------------------------------
+
+@media only screen and (max-width: $tabletWidth) {
+  .tshirt-wrapper {
+    flex-wrap: wrap;
+  }
+
+}
+
+
+//----------------------------------------
+//  Mobile Rules
+//----------------------------------------
+
+@media only screen and (max-width: $mobileWidth) {
+  .tshirt-wrapper {
+    flex-direction: column;
+  }
+
+}
