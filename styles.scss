@@ -23,10 +23,10 @@ html {
 p {
   color: $mainColor;
   flex:1;
+  font-family: arial;
   margin: 0 2rem 0 2rem;
   min-width: 20rem;
   padding: .5rem 0 0 1rem;
-  font-family: arial;
 }
 
 img {
@@ -80,8 +80,8 @@ img {
 }
 
 .nav li:hover {
-  color: white;
   background-color: $mainColor;
+  color: white;
 }
 
 .nav-wrapper {
@@ -112,25 +112,34 @@ img {
 .dropdown-content {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   display: none;
-  padding: 1rem;
+  padding: 0;
   z-index: 2;
 }
 
 .dropdown-content a {
+  font-size: 1rem;
   text-decoration: none;
   flex: 1;
+  padding: 20px 0 5px 10px;
 }
 
 .dropdown-content a:hover {
   background-color: #f1f1f1;
 }
 .size:hover .dropdown-content {
-  display: block;
+  display: inline-block;
 }
 
 .block:hover .dropdown-content {
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
+}
+
+.block .dropdown-content a {
+  flex: 1;
+  padding: .7rem 0 .7rem .3rem;
+  margin: 0 .1rem 0 0;
 }
 
 .image-container {
@@ -142,23 +151,23 @@ img {
 }
 
 .shirt-image {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
-  min-width: 17rem;
   max-width: 20rem;
+  min-width: 17rem;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.6s;
 }
 
 .front, .back {
   backface-visibility: hidden;
-  position: absolute;
   bottom: 50px;
   left: 0;
+  position: absolute;
 }
 
 .front {
-  z-index: 2;
   transform: rotateY(0deg);
+  z-index: 2;
 }
 
 .back {
