@@ -2,6 +2,7 @@
 //  Constants
 //----------------------------------------
 $mainbodyFontSize: 16px;
+$mainColor: #207AD4;
 
 $maxWidth: 1200px;
 $tabletWidth: 960px;
@@ -19,6 +20,19 @@ html {
   box-sizing: border-box;
 }
 
+p {
+  color: $mainColor;
+  flex:1;
+  margin: 0 2rem 0 2rem;
+  min-width: 20rem;
+  padding: .5rem 0 0 1rem;
+  font-family: arial;
+}
+
+img {
+  width: 100%;
+}
+
 //----------------------------------------
 //  Class Rules
 //----------------------------------------
@@ -30,22 +44,20 @@ html {
   width: 100%;
 }
 
-img {
-  width: 100%;
-}
-
 .tshirt {
-  border: 1px solid lightblue;
+  border: 1px solid $mainColor;
   flex: 1;
   margin: 1rem 2rem 0 2rem;
   min-width: 17rem;
-  padding: 1rem 2rem 0 2rem;
+  max-width: 20rem;
+  padding: 20rem 2rem 0 2rem;
 }
 
 .nav {
   border-top: none;
   margin: 0 2rem 0 2rem;
   min-width: 17rem;
+  max-width: 20rem;
   padding: 0;
 }
 
@@ -58,8 +70,8 @@ img {
 }
 
 .nav li {
-  border: 1px solid lightblue;
-  color: lightblue;
+  border: 1px solid $mainColor;
+  color: $mainColor;
   flex: 1;
   list-style-type: none;
   margin: 0 auto;
@@ -69,7 +81,7 @@ img {
 
 .nav li:hover {
   color: white;
-  background-color: lightblue;
+  background-color: $mainColor;
 }
 
 .nav-wrapper {
@@ -77,11 +89,83 @@ img {
 }
 
 .basket img {
-  width: 2rem;
+  padding: .3rem 0 0 0;
+  width: 1rem;
 }
 
+.pinkBlock {
+  color: pink;
+}
 
-//----------------------------------------
+.orangeBlock {
+  color: orange;
+}
+
+.greenBlock {
+  color: green;
+}
+
+.blueBlock {
+  color: $mainColor;
+}
+
+.dropdown-content {
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: none;
+  padding: 1rem;
+  z-index: 2;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  flex: 1;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.size:hover .dropdown-content {
+  display: block;
+}
+
+.block:hover .dropdown-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  perspective: 1000px;
+}
+
+.image-container.flipped .shirt-image, .image-container:hover .shirt-image {
+  transform: rotateY(180deg);
+}
+
+.shirt-image {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  min-width: 17rem;
+  max-width: 20rem;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+//---------------------------------------
 //  Tablet Rules
 //----------------------------------------
 @media only screen and (max-width: $tabletWidth) {
@@ -97,6 +181,10 @@ img {
 @media only screen and (max-width: $mobileWidth) {
   .tshirt-wrapper {
     flex-direction: column;
+  }
+
+  .nav-wrapper {
+    width: 80%;
   }
 
 }
