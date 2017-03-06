@@ -1,3 +1,62 @@
+html {
+  font-size: 16px; }
 
+* {
+  box-sizing: border-box; }
+
+.tshirt-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%; }
+
+img {
+  width: 100%; }
+
+.tshirt {
+  border: 1px solid lightblue;
+  flex: 1;
+  margin: 1rem 2rem 0 2rem;
+  min-width: 17rem;
+  padding: 1rem 2rem 0 2rem; }
+
+.nav {
+  border-top: none;
+  margin: 0 2rem 0 2rem;
+  min-width: 17rem;
+  padding: 0; }
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  height: 3rem;
+  margin: 0;
+  padding: 0; }
+
+.nav li {
+  border: 1px solid lightblue;
+  color: lightblue;
+  flex: 1;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: .8rem 0 .5rem 0;
+  text-align: center; }
+
+.nav li:hover {
+  color: white;
+  background-color: lightblue; }
+
+.nav-wrapper {
+  width: 33.33%; }
+
+.basket img {
+  width: 2rem; }
+
+@media only screen and (max-width: 960px) {
+  .nav-wrapper {
+    width: 50%; } }
+@media only screen and (max-width: 600px) {
+  .tshirt-wrapper {
+    flex-direction: column; } }
 
 /*# sourceMappingURL=styles.css.map */
