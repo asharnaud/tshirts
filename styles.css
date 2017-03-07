@@ -24,7 +24,7 @@ img {
 .tshirt {
   border: 1px solid #207AD4;
   flex: 1;
-  margin: 1rem 2rem 0 2rem;
+  margin: .5rem 1rem 0 2rem;
   min-width: 17rem;
   max-width: 20rem;
   padding: 20rem 2rem 0 2rem; }
@@ -78,8 +78,7 @@ img {
 .dropdown-content {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   display: none;
-  padding: 0;
-  z-index: 2; }
+  padding: 0; }
 
 .dropdown-content a {
   font-size: 1rem;
@@ -110,8 +109,7 @@ img {
   transform: rotateY(180deg); }
 
 .shirt-image {
-  max-width: 20rem;
-  min-width: 17rem;
+  max-width: 19rem;
   position: relative;
   transform-style: preserve-3d;
   transition: 0.6s; }
@@ -124,7 +122,7 @@ img {
 
 .front {
   transform: rotateY(0deg);
-  z-index: 2; }
+  z-index: 1; }
 
 .back {
   transform: rotateY(180deg); }
